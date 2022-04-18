@@ -58,7 +58,7 @@ void _screen_header() {
     display->drawXbm(display->getWidth() - SATELLITE_IMAGE_WIDTH, 0, SATELLITE_IMAGE_WIDTH, SATELLITE_IMAGE_HEIGHT, SATELLITE_IMAGE);
 }
 
-void screen_show_logo() {
+void screen_show_logo_ttn() {
     if(!display) return;
 
     uint8_t x = (display->getWidth() - TTN_IMAGE_WIDTH) / 2;

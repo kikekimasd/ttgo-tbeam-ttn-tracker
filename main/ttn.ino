@@ -430,3 +430,8 @@ void ttn_send(uint8_t * data, uint8_t data_size, uint8_t port, bool confirmed){
 void ttn_loop() {
     os_runloop_once();
 }
+
+void ttn_saludo(){
+    static uint8_t mydata[] = "Hola";    
+    ttn_send(mydata, sizeof(mydata), LORAWAN_PORT, false);
+}

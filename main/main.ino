@@ -34,7 +34,7 @@ String baChStatus = "No charging";
 bool ssd1306_found = false;
 bool axp192_found = false;
 
-bool packetSent, packetQueued;
+bool packetSent, packetQueued, primerEnvio;
 
 #if defined(PAYLOAD_USE_FULL)
   // includes number of satellites and accuracy
@@ -58,8 +58,8 @@ void buildPacket(uint8_t txBuffer[]); // needed for platformio
  * If we have a valid position send it to the server.
  * @return true if we decided to send.
  */
-bool trySend() {
-  packetSent = false;
+bool trySend() {  
+  packetSent = false;  
   // We also wait for altitude being not exactly zero, because the GPS chip generates a bogus 0 alt report when first powered on
   if (0 < gps_hdop() && gps_hdop() < 50 && gps_latitude() != 0 && gps_longitude() != 0 && gps_altitude() != 0)
   {
@@ -347,7 +347,7 @@ void setup() {
   if (bootCount == 0) {
 #endif
     screen_print(APP_NAME " " APP_VERSION, 0, 0);
-    screen_show_logo();
+    screen_show_logo_ttn();
     screen_update();
     delay(LOGO_DELAY);
  #ifndef ALWAYS_SHOW_LOGO
@@ -387,6 +387,7 @@ void loop() {
   if (!digitalRead(BUTTON_PIN)) {
     if (!wasPressed) { // just started a new press
       Serial.println("pressing");
+      ttn_saludo();
       wasPressed = true;
       minPressMs = millis() + 3000;
     } 

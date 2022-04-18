@@ -1,5 +1,5 @@
 // AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
-
+//
 // PIO Unified Debugger
 //
 // Documentation: https://docs.platformio.org/page/plus/debugging.html
@@ -12,23 +12,33 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "c:/Users/Tidop/Desktop/Kike_Data/02_Proyectos/23_IGDA/Nodos/ttgo-tbeam-ttn-tracker/.pio/build/esp32/firmware.elf",
+            "executable": "c:/Users/Tidop/Desktop/Kike_Data/02_Proyectos/23_IGDA/2021/MapeadoTBeam/ttgo-tbeam-ttn-tracker/.pio/build/esp32/firmware.elf",
             "projectEnvName": "esp32",
-            "toolchainBinDir": "C:/Users/Tidop/.platformio/packages/toolchain-xtensa32/bin",
+            "toolchainBinDir": "C:/Users/Tidop/.platformio/packages/toolchain-xtensa32@2.50200.80/bin",
+            "internalConsoleOptions": "openOnSessionStart",
             "preLaunchTask": {
                 "type": "PlatformIO",
                 "task": "Pre-Debug"
-            },
-            "internalConsoleOptions": "openOnSessionStart"
+            }
         },
         {
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "c:/Users/Tidop/Desktop/Kike_Data/02_Proyectos/23_IGDA/Nodos/ttgo-tbeam-ttn-tracker/.pio/build/esp32/firmware.elf",
+            "executable": "c:/Users/Tidop/Desktop/Kike_Data/02_Proyectos/23_IGDA/2021/MapeadoTBeam/ttgo-tbeam-ttn-tracker/.pio/build/esp32/firmware.elf",
             "projectEnvName": "esp32",
-            "toolchainBinDir": "C:/Users/Tidop/.platformio/packages/toolchain-xtensa32/bin",
+            "toolchainBinDir": "C:/Users/Tidop/.platformio/packages/toolchain-xtensa32@2.50200.80/bin",
             "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (without uploading)",
+            "executable": "c:/Users/Tidop/Desktop/Kike_Data/02_Proyectos/23_IGDA/2021/MapeadoTBeam/ttgo-tbeam-ttn-tracker/.pio/build/esp32/firmware.elf",
+            "projectEnvName": "esp32",
+            "toolchainBinDir": "C:/Users/Tidop/.platformio/packages/toolchain-xtensa32@2.50200.80/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "loadMode": "manual"
         }
     ]
 }
